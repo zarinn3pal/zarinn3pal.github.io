@@ -1,0 +1,48 @@
+title: Random Thoughts
+description: Random Thoughts
+author: Niraj Nepal
+github: https://github.com/zarinn3pal
+about: An Engineer and a Technology Enthusiast. Avid learner of Computer and Programming.
+disqus_shortname: zarinn3pal
+google_analytics: UA-XXXXXXXX-Y
+avatar_url: /static/img/avatar.jpg
+
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-twitter
+      link: "https://twitter.com/zarinn3pal"
+    - icon: fa-github
+      link: "https://github.com/zarinn3pal"
+
+share:
+  twitter_username: github.io
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://zarinn3pal.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']

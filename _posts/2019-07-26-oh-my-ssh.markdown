@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Oh my SSH"
-date:   2019-07-26 01:00:00 +0545
+date:   2019-07-26 14:00:00 +0545
 categories: [bash, security]
 ---
 

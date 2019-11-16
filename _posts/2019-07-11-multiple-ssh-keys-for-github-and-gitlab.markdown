@@ -2,7 +2,7 @@
 layout: post
 title:  "Multiple SSH keys for Github and Gitlab"
 date:   2019-07-11 13:00:00 +0545
-categories: [bash]
+categories: [bash, git]
 ---
 
 Git is one of the most used version control management software used by software engineers all over the world. Github has been well known as a leading remote repository hosting service for more than a decade.However collaboration limitations on private repositiries have attracted teams to use Gitlab.So why not use both and harness the best features provided by each repository hosting service.
@@ -16,11 +16,11 @@ $ ssh-keygen -t rsa -C "emailfor@github.com"
 When you see the following message, enter a unique name. I will be using `id_rsa_home` for github and `id_rsa_work` for gitlab.
 
 {% highlight ruby %}
-Generating public/private rsa key pair. 
+Generating public/private rsa key pair.
 Enter file in which to save the key (/home/username/.ssh/id_rsa): /home/username/.ssh.id_rsa_home
 {% endhighlight %}
 
-Next, you'll be asked to enter a passphrase. Enter a secure one.So, you'll have created SSH key for your home account(i.e Github). 
+Next, you'll be asked to enter a passphrase. Enter a secure one.So, you'll have created SSH key for your home account(i.e Github).
 
 Generate SSH keys for gitlab.
 {% highlight ruby %}
@@ -30,7 +30,7 @@ $ ssh-keygen -t rsa -C "emailfor@gitlab.com"
 Enter name for file.
 
 {% highlight ruby %}
-Generating public/private rsa key pair. 
+Generating public/private rsa key pair.
 Enter file in which to save the key (/home/username/.ssh/id_rsa): /home/username/.ssh.id_rsa_work
 {% endhighlight %}
 
@@ -50,7 +50,7 @@ $ vim config
 Add into the config file.
 {% highlight ruby %}
 # GITLAB
-Host gitlab.com 
+Host gitlab.com
    HostName gitlab.com
    PreferredAuthentications publickey
    IdentityFile ~/.ssh/id_rsa_work
@@ -93,6 +93,6 @@ It's required to distinguish your accounts.
 {% highlight ruby %}
 $ cd github_project
 $ git config user.name "home_user"
-$ git config user.email "emailfor@github.com" 
+$ git config user.email "emailfor@github.com"
 {% endhighlight %}
 
